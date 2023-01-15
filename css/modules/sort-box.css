@@ -1,0 +1,36 @@
+.sort-box {
+    padding: 10px 10px;
+    background: #fff;
+    font-size: 1rem;
+    z-index: 100;
+    width: 240px;
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2px;
+    margin: 0 auto;
+    transition: .3s ease-out;
+    z-index: 5;
+}
+
+.sort-icon {
+    cursor: pointer;
+    padding: 2px 5px;
+}
+
+@media screen and (min-width: 576px){
+    .sort-box {
+        display: flex;
+        position: inherit;
+        transform: translate(0);
+        font-size: 2.2rem;
+        padding: 20px 30px;
+        max-width: 540px;
+        width: inherit;
+        margin-bottom: 30px;
+    }
+}

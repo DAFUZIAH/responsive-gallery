@@ -1,0 +1,22 @@
+.active {
+    background: #000;
+    color: #fff;
+}
+
+.sort-box.is-hide {
+    transform: translate(200%);
+}
+
+.has-no-display {
+    display: none;
+}
+
+.has-no-display ~ .big,
+.has-no-display ~ .fat{
+    grid-row-end: span 1;
+    grid-column-end: span 1;
+}
+
+.has-no-scroll {
+    overflow: hidden;
+}

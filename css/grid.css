@@ -1,0 +1,143 @@
+:root {
+    --res-medium: 576px;
+    --res-large: 992px;
+    --grid-row-height: 450px;
+    
+    --grid-gap: 10px;
+  }
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: var(--grid-row-height);
+    grid-gap: var(--grid-gap);
+    position: relative;
+  
+}
+
+.col {
+    color: grey;
+    overflow: hidden;
+    transition: .1s ease-out;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+.col:hover {
+    transform: scale(101%);
+}
+
+.col:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.col:hover::after{
+    opacity: 1;
+}
+
+.col::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .1s ease-out;
+    z-index: 2;
+}
+
+  .overlay {
+    position: absolute;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 900;
+    top: 10px;
+    left: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .2s ease-out;
+    z-index: 3;
+}
+
+.col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.col-1 {
+    grid-column-end: span 1;
+  }
+
+.medium {
+    grid-row-end: span 3;
+}
+
+  /* MEDIA QUERIES */
+  
+@media screen and (min-width: 576px){
+    .container {
+        max-width: 992px;
+    }
+    
+.grid {
+    grid-template-columns: 1fr 1fr;
+    }
+    
+.col-2,
+.col-md-2 {
+    grid-column-end: span 2;
+  }
+
+  .fat {
+    grid-column-end: span 2;
+  }
+
+  .big-md {
+    grid-row-end: span 2;
+  }
+}
+  
+@media screen and (min-width: 992px){
+    .container {
+    max-width: 1600px;
+  }
+    
+.grid {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+.col-3,
+.col-lg-3 {
+    grid-column-end: span 3;
+  }
+  
+.col-4 {
+    grid-column-end: span 4;
+  }
+
+  .fat {
+    grid-column-end: span 2;
+  }
+
+  .big {
+    grid-row-end: span 2;
+  }
+
+  .big-md {
+    grid-row-end: span 1;
+  }
+}

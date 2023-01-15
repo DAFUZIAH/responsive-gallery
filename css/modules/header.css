@@ -1,0 +1,164 @@
+header,
+footer {
+    padding: 30px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.title {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.title.footer {
+    margin-bottom: 1rem;
+}
+
+.contact {
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+}
+
+.footer-contact,
+.footer-contact-link {
+    margin-bottom: 30px;
+}
+
+.burger {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .3s ease-out;
+    overflow: hidden;
+    z-index: 100;
+    position: relative;
+}
+
+.burger div {
+    width: 100%;
+    height: 27%;
+    background: #000;
+    border-radius: 2px;
+}
+
+.burger:hover div {
+    animation: speed .6s ease-out;
+}
+
+.burger div:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.burger div:last-child {
+    animation-delay: .2s;
+}
+
+.burger.burger.is-crossed {
+    transform: rotate(90deg);
+}
+
+.burger.burger.is-crossed div {
+    background: #fff;
+}
+
+.burger-overlay {
+    background: rgba(0,0,0,.75);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    /* transform: translateY(-100%); */
+    /* transition: .3s ease-out; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    /* border-radius: 0 0 50% 50%; */
+}
+
+.overlay-links {
+    font-size: 5rem;
+    font-weight: 900;
+    cursor: pointer;
+    /* transform: translateY(-20px); */
+    /* opacity: 0; */
+    /* transition: .5s ease-out; */
+}
+
+/* .overlay-links:first-child {
+    transition-delay: .3s;
+}
+
+.overlay-links:nth-child(2){
+    transition-delay: .4s;
+}
+
+.overlay-links:nth-child(3){
+    transition-delay: .6s;
+}
+
+.overlay-links:last-child {
+    transition-delay: .7s;
+} */
+
+
+/* .burger-overlay.is-open {
+    transform: translateY(0);
+} */
+
+/* .burger-overlay.is-open .overlay-links{
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+@keyframes speed {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-100%);
+    }
+    
+    25.1%,
+    50% {
+        transform: translate(150%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@media screen and (min-width: 576px){
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-contact,
+.footer-contact-link {
+    margin-bottom: 0;
+}
+}
+
+@media screen and (min-width: 992px) {
+    .title {
+        font-size: 3rem;
+    }
+  .overlay-links {
+    font-size: 9rem;
+  }
+
+}

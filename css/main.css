@@ -1,0 +1,51 @@
+@import "grid.css";
+@import "lightbox.css";
+@import "modules/header.css";
+@import "modules/states.css";
+@import "modules/sort-box.css";
+
+
+:root {
+
+	/* COLORS */
+	--light-color: #fffff;
+	--dark-color: #000;
+
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	display: block;
+	width: auto;
+	/* position: absolute;
+	top: 0;
+	left: 0; */
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* GUI'S CASCADING STYLES SHEETS */
+
+body {
+	font-family: 'brandon-grotesque', sans-serif;
+}
